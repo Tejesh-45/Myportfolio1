@@ -1,13 +1,95 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-    </head>
-    <body>
-        <h1>Hello I'm a budding software engineer</h1>
-        <p>This is my first web page using Git</p>
-        
-    </body>
-    </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Creational Patterns — Food Delivery Demo</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <h1>Creational Patterns — Food Delivery Demo</h1>
+    <p>Singleton · Factory · Abstract Factory · Builder · Prototype</p>
+  </header>
+
+  <main>
+    <section id="singleton">
+      <h2>Singleton — AppConfig</h2>
+      <div class="card">
+        <div>
+          <label>Currency: <span id="currencyDisplay"></span></label>
+        </div>
+        <div>
+          <label>Tax %: <span id="taxDisplay"></span></label>
+        </div>
+        <div>
+          <label>Discount: <span id="discountDisplay"></span></label>
+        </div>
+        <button id="toggleCurrency">Toggle Currency</button>
+        <button id="createConfig">Call new AppConfig()</button>
+        <div id="singletonLog" class="log"></div>
+      </div>
+    </section>
+
+    <section id="factory">
+      <h2>Factory Method — Users</h2>
+      <div class="card">
+        <button data-type="Customer" class="createUser">Create Customer</button>
+        <button data-type="DeliveryPartner" class="createUser">Create DeliveryPartner</button>
+        <button data-type="Restaurant" class="createUser">Create Restaurant</button>
+        <div id="users" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="abstractFactory">
+      <h2>Abstract Factory — Payments</h2>
+      <div class="card">
+        <select id="paymentFamily">
+          <option value="UPI">UPI Family</option>
+          <option value="Wallet">Wallet Family</option>
+          <option value="Card">Card Family</option>
+        </select>
+        <button id="makePayment">Make Payment (factory)</button>
+        <div id="paymentLog" class="log"></div>
+      </div>
+    </section>
+
+    <section id="builder">
+      <h2>Builder — Order</h2>
+      <div class="card">
+        <label>Size:
+          <select id="size">
+            <option>Regular</option>
+            <option>Large</option>
+            <option>Extra Large</option>
+          </select>
+        </label>
+        <label>Toppings:
+          <input type="checkbox" value="Cheese" class="topping">Cheese
+          <input type="checkbox" value="Olives" class="topping">Olives
+          <input type="checkbox" value="Peppers" class="topping">Peppers
+        </label>
+        <label>Notes: <input type="text" id="notes" placeholder="e.g. no onions" /></label>
+        <button id="buildOrder">Build Order</button>
+        <div id="orderPreview" class="log"></div>
+      </div>
+    </section>
+
+    <section id="prototype">
+      <h2>Prototype — Clone Orders</h2>
+      <div class="card">
+        <button id="cloneLast">Clone Last Order</button>
+        <button id="modifyClone">Modify Clone (add extra cheese)</button>
+        <div id="prototypeLog" class="log"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Use console for extra debugging. This demo simulates backend behavior in JS.</small>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
+

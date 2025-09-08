@@ -1,0 +1,11 @@
+:root{--bg:#f7f8fb;--card:#fff;--accent:#2b6cb0}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#111}
+header{padding:1rem;background:var(--accent);color:#fff}
+main{padding:1rem;max-width:1000px;margin:1rem auto;display:grid;gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+button{margin:.3rem;padding:.4rem .6rem;border-radius:6px;border:1px solid #ddd;background:#fafafa;cursor:pointer}
+.grid{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.userCard{padding:.5rem .8rem;border-radius:6px;border:1px solid #eee;background:#fff}
+.log{margin-top:.6rem;padding:.6rem;border:1px dashed #ddd;border-radius:6px;background:#fcfcff;min-height:40px}
+footer{padding:1rem;text-align:center;color:#666}
